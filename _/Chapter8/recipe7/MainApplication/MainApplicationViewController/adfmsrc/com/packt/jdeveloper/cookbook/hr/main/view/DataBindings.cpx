@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="11.1.2.60.17" id="DataBindings"
+             SeparateXMLFiles="false" Package="com.packt.jdeveloper.cookbook.hr.main.view" ClientType="Generic">
+  <pageMap>
+    <page path="/WEB-INF/taskflows/chapter6/methodInitializer.xml#methodInitializer@prepare"
+          usageId="com_packt_jdeveloper_cookbook_hr_main_view_methodInitializer_methodInitializer_preparePageDef"/>
+    <page path="/pages/chapter6/methodInitializer/methodInitializerView.jspx" usageId="com_packt_jdeveloper_cookbook_hr_main_view_methodInitializerViewPageDef"/>
+    <page path="/pages/chapter6/taskflowInitializer/taskFlowInitializerView.jspx" usageId="com_packt_jdeveloper_cookbook_hr_main_view_taskFlowInitializerViewViewPageDef"/>
+    <page path="/WEB-INF/taskflows/chapter6/trainTaskFlow.xml#trainTaskFlow@prepare"
+          usageId="com_packt_jdeveloper_cookbook_hr_main_view_trainTaskFlow_trainTaskFlow_preparePageDef"/>
+    <page path="/pages/chapter7/querySearchForm/queryView.jspx"
+          usageId="com_packt_jdeveloper_cookbook_hr_main_view_queryViewPageDef"/>
+    <page path="/pages/chapter7/tree/treeView.jspx"
+          usageId="com_packt_jdeveloper_cookbook_hr_main_view_treeViewPageDef"/>
+    <page path="/pages/chapter7/selectManyShuttle/selectManyShuttleView.jspx"
+          usageId="com_packt_jdeveloper_cookbook_hr_main_view_selectManyShuttleViewPageDef"/>
+    <page path="/pages/chapter7/carousel/carouselView.jspx"
+          usageId="com_packt_jdeveloper_cookbook_hr_main_view_carouselPageDef"/>
+    <page path="/pages/chapter7/poll/pollView.jspx"
+          usageId="com_packt_jdeveloper_cookbook_hr_main_view_pollViewPageDef"/>
+    <page path="/pages/chapter7/templatePopup/templatePopup.jspx"
+          usageId="com_packt_jdeveloper_cookbook_hr_main_view_templatePopupPageDef"/>
+    <page path="/pages/chapter7/exportDataToFile/exportEmployees.jspx"
+          usageId="com_packt_jdeveloper_cookbook_hr_main_view_exportEmployeesPageDef"/>
+    <page path="/pages/chapter7/imageUpload/imageUpload.jspx"
+          usageId="com_packt_jdeveloper_cookbook_hr_main_view_imageUploadPageDef"/>
+    <page path="/pages/chapter8/tableSelectionListener/tableSelectionListener.jspx"
+          usageId="com_packt_jdeveloper_cookbook_hr_main_view_tableSelectionListenerPageDef"/>
+    <page path="/pages/chapter8/queryListener/queryListener.jspx"
+          usageId="com_packt_jdeveloper_cookbook_hr_main_view_queryListenerPageDef"/>
+    <page path="/pages/chapter8/pendingChanges/pendingChanges.jspx"
+          usageId="com_packt_jdeveloper_cookbook_hr_main_view_pendingChangesPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="com_packt_jdeveloper_cookbook_hr_main_view_methodInitializer_methodInitializer_preparePageDef"
+          path="com.packt.jdeveloper.cookbook.hr.main.view.pageDefs.chapter6.methodInitializer_methodInitializer_preparePageDef"/>
+    <page id="com_packt_jdeveloper_cookbook_hr_main_view_methodInitializerViewPageDef"
+          path="com.packt.jdeveloper.cookbook.hr.main.view.pageDefs.chapter6.methodInitializerViewPageDef"/>
+    <page id="com_packt_jdeveloper_cookbook_hr_main_view_taskFlowInitializerViewViewPageDef"
+          path="com.packt.jdeveloper.cookbook.hr.main.view.pageDefs.chapter6.taskFlowInitializerViewPageDef"/>
+    <page id="com_packt_jdeveloper_cookbook_hr_main_view_trainTaskFlow_trainTaskFlow_preparePageDef"
+          path="com.packt.jdeveloper.cookbook.hr.main.view.pageDefs.chapter6.trainTaskFlow_trainTaskFlow_preparePageDef"/>
+    <page id="com_packt_jdeveloper_cookbook_hr_main_view_queryViewPageDef"
+          path="com.packt.jdeveloper.cookbook.hr.main.view.pageDefs.chapter7.queryViewPageDef"/>
+    <page id="com_packt_jdeveloper_cookbook_hr_main_view_treeViewPageDef"
+          path="com.packt.jdeveloper.cookbook.hr.main.view.pageDefs.chapter7.treeViewPageDef"/>
+    <page id="com_packt_jdeveloper_cookbook_hr_main_view_selectManyShuttleViewPageDef"
+          path="com.packt.jdeveloper.cookbook.hr.main.view.pageDefs.chapter7.selectManyShuttleViewPageDef"/>
+    <page id="com_packt_jdeveloper_cookbook_hr_main_view_carouselPageDef"
+          path="com.packt.jdeveloper.cookbook.hr.main.view.pageDefs.chapter7.carouselPageDef"/>
+    <page id="com_packt_jdeveloper_cookbook_hr_main_view_pollViewPageDef"
+          path="com.packt.jdeveloper.cookbook.hr.main.view.pageDefs.chapter7.pollViewPageDef"/>
+    <page id="com_packt_jdeveloper_cookbook_hr_main_view_templatePopupPageDef"
+          path="com.packt.jdeveloper.cookbook.hr.main.view.pageDefs.chapter7.templatePopupPageDef"/>
+    <page id="com_packt_jdeveloper_cookbook_hr_main_view_exportEmployeesPageDef"
+          path="com.packt.jdeveloper.cookbook.hr.main.view.pageDefs.chapter7.exportEmployeesPageDef"/>
+    <page id="com_packt_jdeveloper_cookbook_hr_main_view_imageUploadPageDef"
+          path="com.packt.jdeveloper.cookbook.hr.main.view.pageDefs.chapter7.imageUploadPageDef"/>
+    <page id="com_packt_jdeveloper_cookbook_hr_main_view_tableSelectionListenerPageDef"
+          path="com.packt.jdeveloper.cookbook.hr.main.view.pageDefs.chapter8.tableSelectionListenerPageDef"/>
+    <page id="com_packt_jdeveloper_cookbook_hr_main_view_queryListenerPageDef"
+          path="com.packt.jdeveloper.cookbook.hr.main.view.pageDefs.chapter8.queryListenerPageDef"/>
+    <page id="com_packt_jdeveloper_cookbook_hr_main_view_pendingChangesPageDef"
+          path="com.packt.jdeveloper.cookbook.hr.main.view.pageDefs.chapter8.pendingChangesPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="HrComponentsAppModuleDataControl"
+                     Package="com.packt.jdeveloper.cookbook.hr.components.model.application"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="HrComponentsAppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

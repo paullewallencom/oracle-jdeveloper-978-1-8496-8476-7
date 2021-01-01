@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE JboProject SYSTEM "jbo_03_01.dtd">
+<!---->
+<JboProject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="MainApplicationModel"
+  Version="11.1.2.60.81"
+  SeparateXMLFiles="true"
+  PackageName="com.packt.jdeveloper.cookbook.hr.main.model">
+  <DesignTime>
+    <Attr Name="_jprName" Value="../../../../../../../../MainApplicationModel.jpr"/>
+    <Attr Name="_NamedConnection" Value="HR"/>
+  </DesignTime>
+</JboProject>

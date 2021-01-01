@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="syncEmployeesTaskFlow">
+    <default-activity>synchronizeEmployee</default-activity>
+    <method-call id="synchronizeEmployee">
+      <method>#{bindings.synchronizeEmployee.execute}</method>
+      <outcome>
+        <fixed-outcome>synchronizeEmployee</fixed-outcome>
+      </outcome>
+    </method-call>
+    <visibility>
+      <url-invoke-allowed/>
+    </visibility>
+  </task-flow-definition>
+</adfc-config>

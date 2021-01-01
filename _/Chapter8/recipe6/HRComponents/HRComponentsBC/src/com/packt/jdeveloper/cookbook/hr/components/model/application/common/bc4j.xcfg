@@ -1,0 +1,42 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="com.packt.jdeveloper.cookbook.hr.components.model.application.HrComponentsAppModule">
+      <AppModuleConfig DeployPlatform="LOCAL" JDBCName="HR" jbo.project="com.packt.jdeveloper.cookbook.hr.components.model.HRComponentsBC" name="HrComponentsAppModuleLocal" TransactionFactory="com.packt.jdeveloper.cookbook.shared.bc.extensions.ExtDatabaseTransactionFactory" ApplicationName="com.packt.jdeveloper.cookbook.hr.components.model.application.HrComponentsAppModule">
+         <AM-Pooling jbo.ampool.maxinactiveage="1000"/>
+         <Database jbo.locking.mode="optimistic"/>
+         <Security AppModuleJndiName="com.packt.jdeveloper.cookbook.hr.components.model.application.HrComponentsAppModule"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="HrComponentsAppModuleShared" ApplicationName="com.packt.jdeveloper.cookbook.hr.components.model.application.HrComponentsAppModule" DeployPlatform="LOCAL" JDBCName="HR" jbo.project="com.packt.jdeveloper.cookbook.hr.components.model.HRComponentsBC">
+         <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+         <Security AppModuleJndiName="com.packt.jdeveloper.cookbook.hr.components.model.application.HrComponentsAppModule"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="HrComponentsAppModuleService" ApplicationName="com.packt.jdeveloper.cookbook.hr.components.model.application.HrComponentsAppModule" DeployPlatform="SI" jbo.project="com.packt.jdeveloper.cookbook.hr.components.model.HRComponentsBC">
+         <AM-Pooling jbo.ampool.resetnontransactionalstate="true"/>
+         <Database jbo.locking.mode="optimistic"/>
+         <Security AppModuleJndiName="com.packt.jdeveloper.cookbook.hr.components.model.application.HrComponentsAppModule"/>
+         <Custom JDBCDataSource="java:comp/env/jdbc/HRDS"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <AppModuleConfigBag ApplicationName="com.packt.jdeveloper.cookbook.hr.components.model.application.HrSharedComponentsAppModule" default="HrSharedComponentsAppModuleShared">
+      <AppModuleConfig name="HrSharedComponentsAppModuleLocal" ApplicationName="com.packt.jdeveloper.cookbook.hr.components.model.application.HrSharedComponentsAppModule" DeployPlatform="LOCAL" jbo.project="com.packt.jdeveloper.cookbook.hr.components.model.HRComponentsBC">
+         <Security AppModuleJndiName="com.packt.jdeveloper.cookbook.hr.components.model.application.HrSharedComponentsAppModule"/>
+         <Custom JDBCDataSource="java:comp/env/jdbc/HRDS"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="HrSharedComponentsAppModuleShared" ApplicationName="com.packt.jdeveloper.cookbook.hr.components.model.application.HrSharedComponentsAppModule" DeployPlatform="LOCAL" jbo.project="com.packt.jdeveloper.cookbook.hr.components.model.HRComponentsBC">
+         <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+         <Security AppModuleJndiName="com.packt.jdeveloper.cookbook.hr.components.model.application.HrSharedComponentsAppModule"/>
+         <Custom JDBCDataSource="java:comp/env/jdbc/HRDS"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+   <AppModuleConfigBag ApplicationName="com.packt.jdeveloper.cookbook.hr.components.model.application.UserInfoAppModule">
+      <AppModuleConfig name="UserInfoAppModuleLocal" ApplicationName="com.packt.jdeveloper.cookbook.hr.components.model.application.UserInfoAppModule" DeployPlatform="LOCAL" jbo.project="com.packt.jdeveloper.cookbook.hr.components.model.HRComponentsBC">
+         <Security AppModuleJndiName="com.packt.jdeveloper.cookbook.hr.components.model.application.UserInfoAppModule"/>
+         <Custom JDBCDataSource="java:comp/env/jdbc/HRDS"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="UserInfoAppModuleShared" ApplicationName="com.packt.jdeveloper.cookbook.hr.components.model.application.UserInfoAppModule" DeployPlatform="LOCAL" jbo.project="com.packt.jdeveloper.cookbook.hr.components.model.HRComponentsBC">
+         <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+         <Security AppModuleJndiName="com.packt.jdeveloper.cookbook.hr.components.model.application.UserInfoAppModule"/>
+         <Custom JDBCDataSource="java:comp/env/jdbc/HRDS"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>

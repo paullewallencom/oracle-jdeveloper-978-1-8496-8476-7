@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE JboProject SYSTEM "jbo_03_01.dtd">
+<!---->
+<JboProject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="HRDeparmentsBC"
+  Version="11.1.2.60.17"
+  SeparateXMLFiles="true"
+  PackageName="com.packt.jdeveloper.cookbook.hr.departments.model">
+  <DesignTime>
+    <Attr Name="_NamedConnection" Value="HR"/>
+    <Attr Name="_appModuleNames0"
+      Value="com.packt.jdeveloper.cookbook.hr.departments.model.application.DepartmentAppModule"/>
+    <Attr Name="_jprName" Value="../../../../../../../../HRDeparmentsBC.jpr"/>
+  </DesignTime>
+  <Containee
+    Name="application"
+    PackageName="com.packt.jdeveloper.cookbook.hr.departments.model.application"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_AM" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="entity"
+    PackageName="com.packt.jdeveloper.cookbook.hr.departments.model.entity"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_EO" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="view"
+    PackageName="com.packt.jdeveloper.cookbook.hr.departments.model.view"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VO" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <AppContainee
+    Name="SharedBC"
+    FullName="com.packt.jdeveloper.cookbook.shared.bc.SharedBC"
+    ObjectType="JboProject">
+    <DesignTime>
+      <Attr Name="_SourceName" Value="SharedComponents.jar"/>
+    </DesignTime>
+  </AppContainee>
+</JboProject>

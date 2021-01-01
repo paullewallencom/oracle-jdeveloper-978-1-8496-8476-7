@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="11.1.2.60.17" id="DataBindings"
+             SeparateXMLFiles="false" Package="com.packt.jdeveloper.cookbook.hr.main.view" ClientType="Generic">
+  <pageMap>
+    <page path="/WEB-INF/taskflows/chapter6/methodInitializer.xml#methodInitializer@prepare"
+          usageId="com_packt_jdeveloper_cookbook_hr_main_view_methodInitializer_methodInitializer_preparePageDef"/>
+    <page path="/pages/chapter6/methodInitializerView.jspx" usageId="com_packt_jdeveloper_cookbook_hr_main_view_methodInitializerViewPageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="com_packt_jdeveloper_cookbook_hr_main_view_methodInitializer_methodInitializer_preparePageDef"
+          path="com.packt.jdeveloper.cookbook.hr.main.view.pageDefs.chapter6.methodInitializer_methodInitializer_preparePageDef"/>
+    <page id="com_packt_jdeveloper_cookbook_hr_main_view_methodInitializerViewPageDef"
+          path="com.packt.jdeveloper.cookbook.hr.main.view.pageDefs.chapter6.methodInitializerViewPageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="HrComponentsAppModuleDataControl"
+                     Package="com.packt.jdeveloper.cookbook.hr.components.model.application"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="HrComponentsAppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

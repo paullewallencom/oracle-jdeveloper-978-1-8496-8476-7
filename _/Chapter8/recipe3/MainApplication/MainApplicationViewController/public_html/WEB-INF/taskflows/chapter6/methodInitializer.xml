@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="methodInitializer">
+    <default-activity>prepare</default-activity>
+    <method-call id="prepare">
+      <method>#{bindings.prepare.execute}</method>
+      <outcome>
+        <fixed-outcome>prepare</fixed-outcome>
+      </outcome>
+    </method-call>
+    <view id="methodInitializerView">
+      <page>/pages/chapter6/methodInitializer/methodInitializerView.jspx</page>
+    </view>
+    <control-flow-rule id="__1">
+      <from-activity-id>prepare</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>prepare</from-outcome>
+        <to-activity-id>methodInitializerView</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <visibility>
+      <url-invoke-allowed/>
+    </visibility>
+  </task-flow-definition>
+</adfc-config>

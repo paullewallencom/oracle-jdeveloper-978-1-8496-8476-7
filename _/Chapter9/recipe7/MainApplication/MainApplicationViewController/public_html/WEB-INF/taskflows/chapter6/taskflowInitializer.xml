@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="taskflowInitializer">
+    <default-activity>taskFlowInitializerView</default-activity>
+    <input-parameter-definition id="__5">
+      <name>trainModel</name>
+      <value>#{pageFlowScope.trainModel}</value>
+      <class>oracle.adf.controller.TaskFlowTrainModel</class>
+    </input-parameter-definition>
+    <managed-bean id="__1">
+      <managed-bean-name>InitializerBean</managed-bean-name>
+      <managed-bean-class>com.packt.jdeveloper.cookbook.hr.main.view.beans.chapter6.Initializer</managed-bean-class>
+      <managed-bean-scope>pageFlow</managed-bean-scope>
+    </managed-bean>
+    <initializer>#{pageFlowScope.InitializerBean.initialize}</initializer>
+    <finalizer>#{pageFlowScope.InitializerBean.finalize}</finalizer>
+    <view id="taskFlowInitializerView">
+      <page>/pages/chapter6/taskflowInitializer/taskFlowInitializerView.jspx</page>
+      <train-stop/>
+    </view>
+    <task-flow-return id="previousStop">
+      <outcome>
+        <name>previousStop</name>
+      </outcome>
+    </task-flow-return>
+    <task-flow-return id="nextStop">
+      <outcome>
+        <name>nextStop</name>
+      </outcome>
+    </task-flow-return>
+    <train/>
+    <control-flow-rule id="__2">
+      <from-activity-id>taskFlowInitializerView</from-activity-id>
+      <control-flow-case id="__3">
+        <from-outcome>previous</from-outcome>
+        <to-activity-id>previousStop</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__4">
+        <from-outcome>next</from-outcome>
+        <to-activity-id>nextStop</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <visibility>
+      <url-invoke-allowed/>
+    </visibility>
+  </task-flow-definition>
+</adfc-config>

@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1"
+          xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:h="http://java.sun.com/jsf/html"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+  <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+  <af:pageTemplateDef var="attrs">
+    <af:form id="pt_f1">
+      <af:panelStretchLayout id="pt_psl1">
+        <f:facet name="center">
+          <af:panelSplitter id="pt_ps1" orientation="vertical"
+                            splitterPosition="100">
+            <f:facet name="first">
+              <af:image source="/images/logo.jpg" id="pt_i1"/>
+            </f:facet>
+            <f:facet name="second">
+              <af:decorativeBox id="pt_db1">
+                <f:facet name="center">
+                  <af:panelStretchLayout id="pt_psl2" bottomHeight="80px">
+                    <f:facet name="center">
+                      <af:facetRef facetName="mainContent"/>
+                    </f:facet>
+                    <f:facet name="top">
+                      <af:panelGroupLayout id="pt_pgl5" layout="vertical">
+                        <af:facetRef facetName="popupContent"/>
+                        <af:menuBar id="pt_mb1">
+                          <af:facetRef facetName="menuBar"/>
+                        </af:menuBar>
+                        <af:panelGroupLayout id="pt_pgl2" layout="horizontal">
+                          <af:toolbar id="pt_t2">
+                            <af:facetRef facetName="topBar"/>
+                          </af:toolbar>
+                        </af:panelGroupLayout>
+                      </af:panelGroupLayout>
+                    </f:facet>
+                  </af:panelStretchLayout>
+                </f:facet>
+              </af:decorativeBox>
+            </f:facet>
+          </af:panelSplitter>
+        </f:facet>
+      </af:panelStretchLayout>
+    </af:form>
+    <af:xmlContent>
+      <component xmlns="http://xmlns.oracle.com/adf/faces/rich/component">
+        <display-name>TemplateDef1</display-name>
+        <facet>
+          <description>The page's main content</description>
+          <facet-name>mainContent</facet-name>
+        </facet>
+        <facet>
+          <description>The page's menu</description>
+          <facet-name>menuBar</facet-name>
+        </facet>
+        <facet>
+          <description>The page's top toolbar</description>
+          <facet-name>topBar</facet-name>
+        </facet>
+        <facet>
+          <description>The page's popups</description>
+          <facet-name>popupContent</facet-name>
+        </facet>
+      </component>
+    </af:xmlContent>
+  </af:pageTemplateDef>
+</jsp:root>

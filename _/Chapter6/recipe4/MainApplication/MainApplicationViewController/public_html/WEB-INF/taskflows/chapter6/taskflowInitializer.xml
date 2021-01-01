@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="taskflowInitializer">
+    <default-activity>taskFlowInitializerView</default-activity>
+    <managed-bean id="__1">
+      <managed-bean-name>InitializerBean</managed-bean-name>
+      <managed-bean-class>com.packt.jdeveloper.cookbook.hr.main.view.beans.chapter6.Initializer</managed-bean-class>
+      <managed-bean-scope>pageFlow</managed-bean-scope>
+    </managed-bean>
+    <initializer>#{pageFlowScope.InitializerBean.initialize}</initializer>
+    <finalizer>#{pageFlowScope.InitializerBean.finalize}</finalizer>
+    <view id="taskFlowInitializerView">
+      <page>/pages/chapter6/taskFlowInitializerView.jspx</page>
+    </view>
+    <visibility>
+      <url-invoke-allowed/>
+    </visibility>
+  </task-flow-definition>
+</adfc-config>

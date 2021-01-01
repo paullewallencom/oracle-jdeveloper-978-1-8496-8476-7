@@ -1,0 +1,17 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<weblogic-ejb-jar xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xsi:schemaLocation="http://xmlns.oracle.com/weblogic/weblogic-ejb-jar http://xmlns.oracle.com/weblogic/weblogic-ejb-jar/1.1/weblogic-ejb-jar.xsd"
+                  xmlns="http://xmlns.oracle.com/weblogic/weblogic-ejb-jar">
+  <weblogic-enterprise-bean>
+    <ejb-name>com.packt.jdeveloper.cookbook.hr.components.model.application.common.HrComponentsAppModuleServiceBean</ejb-name>
+    <stateless-session-descriptor>
+      <pool>
+        <initial-beans-in-free-pool>2</initial-beans-in-free-pool>
+      </pool>
+    </stateless-session-descriptor>
+    <transaction-descriptor>
+      <trans-timeout-seconds>120</trans-timeout-seconds>
+    </transaction-descriptor>
+    <enable-call-by-reference>true</enable-call-by-reference>
+  </weblogic-enterprise-bean>
+</weblogic-ejb-jar>

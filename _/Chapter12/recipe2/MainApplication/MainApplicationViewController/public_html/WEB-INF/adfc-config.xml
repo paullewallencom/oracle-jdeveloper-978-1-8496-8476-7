@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <managed-bean id="__1">
+    <managed-bean-name>TaskFlowURLCallerBean</managed-bean-name>
+    <managed-bean-class>com.packt.jdeveloper.cookbook.hr.main.view.beans.chapter6.TaskFlowURLCaller</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__2">
+    <managed-bean-name>TreeBean</managed-bean-name>
+    <managed-bean-class>com.packt.jdeveloper.cookbook.hr.main.view.beans.chapter7.TreeBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__3">
+    <managed-bean-name>SelectManyShuttleBean</managed-bean-name>
+    <managed-bean-class>com.packt.jdeveloper.cookbook.hr.main.view.beans.chapter7.SelectManyShuttleBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__4">
+    <managed-bean-name>PollBean</managed-bean-name>
+    <managed-bean-class>com.packt.jdeveloper.cookbook.hr.main.view.beans.chapter7.PollBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__5">
+    <managed-bean-name>CommonActionsBean</managed-bean-name>
+    <managed-bean-class>com.packt.jdeveloper.cookbook.shared.view.actions.CommonActions</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__6">
+    <managed-bean-name>templatePopup</managed-bean-name>
+    <managed-bean-class>com.packt.jdeveloper.cookbook.hr.main.view.beans.chapter7.TemplatePopup</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__7">
+    <managed-bean-name>ExportEmployeesBean</managed-bean-name>
+    <managed-bean-class>com.packt.jdeveloper.cookbook.hr.main.view.beans.chapter7.ExportEmployeesBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__8">
+    <managed-bean-name>ImageUploadBean</managed-bean-name>
+    <managed-bean-class>com.packt.jdeveloper.cookbook.hr.main.view.beans.chapter7.ImageUploadBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__9">
+    <managed-bean-name>TableSelectionListenerBean</managed-bean-name>
+    <managed-bean-class>com.packt.jdeveloper.cookbook.hr.main.view.beans.chapter8.TableSelectionListenerBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__10">
+    <managed-bean-name>QyeryListenerBean</managed-bean-name>
+    <managed-bean-class>com.packt.jdeveloper.cookbook.hr.main.view.beans.chapter8.QyeryListenerBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__11">
+    <managed-bean-name>SessionInfoBean</managed-bean-name>
+    <managed-bean-class>com.packt.jdeveloper.cookbook.hr.main.view.beans.chapter8.SessionInfoBean</managed-bean-class>
+    <managed-bean-scope>session</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__12">
+    <managed-bean-name>LongRunningTaskBean</managed-bean-name>
+    <managed-bean-class>com.packt.jdeveloper.cookbook.hr.main.view.beans.chapter8.LongRunningTaskBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__13">
+    <managed-bean-name>CollectionPaginationBean</managed-bean-name>
+    <managed-bean-class>com.packt.jdeveloper.cookbook.hr.main.view.beans.chapter8.CollectionPaginationBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__14">
+    <managed-bean-name>JasperReportsBean</managed-bean-name>
+    <managed-bean-class>com.packt.jdeveloper.cookbook.hr.main.view.beans.chapter8.JasperReportsBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__15">
+    <managed-bean-name>AuthenticationBean</managed-bean-name>
+    <managed-bean-class>com.packt.jdeveloper.cookbook.hr.main.view.AuthenticationBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__16">
+    <managed-bean-name>ApplicationSecurityBean</managed-bean-name>
+    <managed-bean-class>com.packt.jdeveloper.cookbook.hr.main.view.beans.chapter9.ApplicationSecurityBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__17">
+    <managed-bean-name>SyncEmployeesBean</managed-bean-name>
+    <managed-bean-class>com.packt.jdeveloper.cookbook.hr.main.view.beans.chapter9.SyncEmployeesBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+</adfc-config>

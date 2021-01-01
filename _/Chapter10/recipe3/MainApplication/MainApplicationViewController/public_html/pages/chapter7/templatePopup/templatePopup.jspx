@@ -1,0 +1,81 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="templatePopup.jspx" id="TemplatePopup">
+            <af:messages id="m1"/>
+            <af:pageTemplate viewId="/WEB-INF/templates/TemplateDef1.jspx" id="generic">
+                <f:facet name="mainContent">
+                    <af:panelFormLayout id="pfl1">
+                        <af:panelLabelAndMessage label="#{bindings.EmployeeId.hints.label}" id="plam1">
+                            <af:outputText value="#{bindings.EmployeeId.inputValue}" id="ot1">
+                                <af:convertNumber groupingUsed="false" pattern="#{bindings.EmployeeId.format}"/>
+                            </af:outputText>
+                        </af:panelLabelAndMessage>
+                        <af:panelLabelAndMessage label="#{bindings.FirstName.hints.label}" id="plam2">
+                            <af:outputText value="#{bindings.FirstName.inputValue}" id="ot2"/>
+                        </af:panelLabelAndMessage>
+                        <af:panelLabelAndMessage label="#{bindings.LastName.hints.label}" id="plam3">
+                            <af:outputText value="#{bindings.LastName.inputValue}" id="ot3"/>
+                        </af:panelLabelAndMessage>
+                        <af:panelLabelAndMessage label="#{bindings.Email.hints.label}" id="plam4">
+                            <af:outputText value="#{bindings.Email.inputValue}" id="ot4"/>
+                        </af:panelLabelAndMessage>
+                        <af:panelLabelAndMessage label="#{bindings.PhoneNumber.hints.label}" id="plam5">
+                            <af:outputText value="#{bindings.PhoneNumber.inputValue}" id="ot5"/>
+                        </af:panelLabelAndMessage>
+                        <af:panelLabelAndMessage label="#{bindings.HireDate.hints.label}" id="plam6">
+                            <af:outputText value="#{bindings.HireDate.inputValue}" id="ot6">
+                                <af:convertDateTime pattern="#{bindings.HireDate.format}"/>
+                            </af:outputText>
+                        </af:panelLabelAndMessage>
+                        <af:panelLabelAndMessage label="#{bindings.JobId.hints.label}" id="plam7">
+                            <af:outputText value="#{bindings.JobId.inputValue}" id="ot7"/>
+                        </af:panelLabelAndMessage>
+                        <af:panelLabelAndMessage label="#{bindings.Salary.hints.label}" id="plam8">
+                            <af:outputText value="#{bindings.Salary.inputValue}" id="ot8">
+                                <af:convertNumber groupingUsed="false" pattern="#{bindings.Salary.format}"/>
+                            </af:outputText>
+                        </af:panelLabelAndMessage>
+                        <af:panelLabelAndMessage label="#{bindings.CommissionPct.hints.label}" id="plam9">
+                            <af:outputText value="#{bindings.CommissionPct.inputValue}" id="ot9">
+                                <af:convertNumber groupingUsed="false" pattern="#{bindings.CommissionPct.format}"/>
+                            </af:outputText>
+                        </af:panelLabelAndMessage>
+                        <af:panelLabelAndMessage label="#{bindings.ManagerId.hints.label}" id="plam10">
+                            <af:outputText value="#{bindings.ManagerId.inputValue}" id="ot10">
+                                <af:convertNumber groupingUsed="false" pattern="#{bindings.ManagerId.format}"/>
+                            </af:outputText>
+                        </af:panelLabelAndMessage>
+                        <af:panelLabelAndMessage label="#{bindings.DepartmentId.hints.label}" id="plam11">
+                            <af:outputText value="#{bindings.DepartmentId.inputValue}" id="ot11">
+                                <af:convertNumber groupingUsed="false" pattern="#{bindings.DepartmentId.format}"/>
+                            </af:outputText>
+                        </af:panelLabelAndMessage>
+                        <f:facet name="footer">
+                            <af:panelGroupLayout layout="horizontal" id="pgl1">
+                                <f:facet name="separator">
+                                    <af:spacer width="10" height="1" id="s1"/>
+                                </f:facet>
+                                <af:commandButton actionListener="#{bindings.First.execute}" text="First"
+                                                  disabled="#{!bindings.First.enabled}" partialSubmit="true" id="cb1"/>
+                                <af:commandButton actionListener="#{bindings.Previous.execute}" text="Previous"
+                                                  disabled="#{!bindings.Previous.enabled}" partialSubmit="true"
+                                                  id="cb2"/>
+                                <af:commandButton actionListener="#{bindings.Next.execute}" text="Next"
+                                                  disabled="#{!bindings.Next.enabled}" partialSubmit="true" id="cb3"/>
+                                <af:commandButton actionListener="#{bindings.Last.execute}" text="Last"
+                                                  disabled="#{!bindings.Last.enabled}" partialSubmit="true" id="cb4"/>
+                                <af:commandButton text="Delete" id="cb5" actionListener="#{templatePopup.delete}"/>
+                            </af:panelGroupLayout>
+                        </f:facet>
+                    </af:panelFormLayout>
+                </f:facet>
+                <f:facet name="menuBar"/>
+                <f:facet name="topBar"/>
+                <f:facet name="popupContent"/>
+            </af:pageTemplate>
+        </af:document>
+    </f:view>
+</jsp:root>

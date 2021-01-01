@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="jasperReports.jspx" id="d1">
+            <af:form id="f1">
+                <af:panelStretchLayout id="psl1">
+                    <f:facet name="top"/>
+                    <f:facet name="center">
+                        <af:toolbar id="t1">
+                            <af:commandButton text="Employees Report" id="cb1"
+                                              actionListener="#{JasperReportsBean.onEmployeesReport}"/>
+                        </af:toolbar>
+                        <!-- id="af_one_column_header_footer_stretched"   -->
+                    </f:facet>
+                    <f:facet name="bottom"/>
+                </af:panelStretchLayout>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

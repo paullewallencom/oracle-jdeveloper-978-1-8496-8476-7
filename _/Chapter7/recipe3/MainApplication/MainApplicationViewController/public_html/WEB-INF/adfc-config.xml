@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <managed-bean id="__1">
+    <managed-bean-name>TaskFlowURLCallerBean</managed-bean-name>
+    <managed-bean-class>com.packt.jdeveloper.cookbook.hr.main.view.beans.chapter6.TaskFlowURLCaller</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+  <managed-bean id="__2">
+    <managed-bean-name>TreeBean</managed-bean-name>
+    <managed-bean-class>com.packt.jdeveloper.cookbook.hr.main.view.beans.chapter7.TreeBean</managed-bean-class>
+    <managed-bean-scope>request</managed-bean-scope>
+  </managed-bean>
+</adfc-config>

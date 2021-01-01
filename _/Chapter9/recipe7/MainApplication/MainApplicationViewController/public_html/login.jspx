@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="untitled1.jspx" id="d1">
+            <af:form id="f1">
+                <af:panelStretchLayout id="psl1">
+                    <f:facet name="top"/>
+                    <f:facet name="center">
+                        <!-- id="af_one_column_header_footer_stretched"   -->
+                        <af:panelGroupLayout id="pgl1" halign="center" layout="scroll">
+                            <af:panelFormLayout id="pfl1">
+                                <f:facet name="footer"/>
+                                <af:panelBox text="Login" id="pb1">
+                                    <f:facet name="toolbar"/>
+                                    <af:panelFormLayout id="pfl2">
+                                        <f:facet name="footer"/>
+                                        <af:panelLabelAndMessage id="plam1" labelStyle="vertical-align:middle">
+                                            <af:panelGroupLayout id="pgl2" valign="middle" layout="horizontal">
+                                                <af:outputText value="User Name:" id="ot1"/>
+                                                <af:inputText label="Username:" id="it1" simple="true"
+                                                              value="#{AuthenticationBean.username}"/>
+                                            </af:panelGroupLayout>
+                                        </af:panelLabelAndMessage>
+                                        <af:panelLabelAndMessage id="plam2" labelStyle="vertical-align:middle">
+                                            <af:panelGroupLayout id="pgl3" layout="horizontal">
+                                                <af:outputText value="Password:" id="ot2"/>
+                                                <af:spacer width="6" id="s1"/>
+                                                <af:inputText label="Password:" id="it2" simple="true" secret="true"
+                                                              value="#{AuthenticationBean.password}"/>
+                                            </af:panelGroupLayout>
+                                        </af:panelLabelAndMessage>
+                                        <af:panelLabelAndMessage id="plam3">
+                                            <af:commandButton text="Login" id="cb1"
+                                                              action="#{AuthenticationBean.login}"/>
+                                        </af:panelLabelAndMessage>
+                                    </af:panelFormLayout>
+                                </af:panelBox>
+                            </af:panelFormLayout>
+                        </af:panelGroupLayout>
+                    </f:facet>
+                    <f:facet name="bottom"/>
+                </af:panelStretchLayout>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Synchronization"
+  Version="11.1.2.60.81"
+  DBObjectType="TABLE"
+  DBObjectName="HR.SYNCHRONIZATION"
+  AliasName="Synchronization"
+  BindingStyle="OracleName"
+  UseGlueCode="false"
+  RowClass="com.packt.jdeveloper.cookbook.shared.bc.extensions.ExtEntityImpl"
+  DefClass="com.packt.jdeveloper.cookbook.shared.bc.extensions.ExtEntityDefImpl">
+  <Attribute
+    Name="ModifiedColumn"
+    ColumnName="MODIFIED_COLUMN"
+    SQLType="NUMERIC"
+    Type="oracle.jbo.domain.Number"
+    ColumnType="NUMBER"
+    TableName="HR.SYNCHRONIZATION">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="30"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="RowID"
+    IsUpdateable="false"
+    ColumnName="ROWID"
+    SQLType="ROWID"
+    Type="oracle.jbo.domain.RowID"
+    ColumnType="ROWID"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="NewColumn"
+    Precision="30"
+    ColumnName="NEW_COLUMN"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="HR.SYNCHRONIZATION">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="30"/>
+    </DesignTime>
+  </Attribute>
+</Entity>

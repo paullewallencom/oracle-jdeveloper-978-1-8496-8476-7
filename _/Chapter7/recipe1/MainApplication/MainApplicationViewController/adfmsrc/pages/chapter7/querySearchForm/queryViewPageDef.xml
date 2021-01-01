@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pageDefinition xmlns="http://xmlns.oracle.com/adfm/uimodel" version="11.1.2.60.17" id="queryViewPageDef"
+                Package="pages.chapter7.querySearchForm">
+  <parameters/>
+  <executables>
+    <variableIterator id="variables"/>
+    <iterator Binds="Employees" RangeSize="25" DataControl="HrComponentsAppModuleDataControl" id="EmployeesIterator"/>
+    <searchRegion Criteria="EmployeesCriteria" Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer"
+                  Binds="EmployeesIterator" id="EmployeesCriteriaQuery"/>
+  </executables>
+  <bindings>
+    <tree IterBinding="EmployeesIterator" id="Employees">
+      <nodeDefinition DefName="com.packt.jdeveloper.cookbook.hr.components.model.view.Employees" Name="Employees0">
+        <AttrNames>
+          <Item Value="EmployeeId"/>
+          <Item Value="FirstName"/>
+          <Item Value="LastName"/>
+          <Item Value="Email"/>
+          <Item Value="PhoneNumber"/>
+          <Item Value="HireDate"/>
+          <Item Value="JobId"/>
+          <Item Value="Salary"/>
+          <Item Value="CommissionPct"/>
+          <Item Value="ManagerId"/>
+          <Item Value="DepartmentId"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
+</pageDefinition>

@@ -1,0 +1,40 @@
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="welcome.jspx" id="d1">
+            <af:messages id="m1"/>
+            <af:form id="f1">
+                <af:panelStretchLayout id="psl1">
+                    <f:facet name="top"/>
+                    <f:facet name="center">
+                        <af:panelGroupLayout layout="scroll" id="pgl1">
+                            <af:panelBox text="Welcome" id="pb1">
+                                <f:facet name="toolbar">
+                                    <af:toolbar id="t1">
+                                        <af:commandButton text="Logout" id="cb1"
+                                                          action="#{AuthenticationBean.logout}"/>
+                                    </af:toolbar>
+                                </f:facet>
+                                <af:panelFormLayout id="pfl1">
+                                    <f:facet name="footer"/>
+                                    <af:outputText value="Succesful authentication. Click on the Logout button to logout from application."
+                                                   id="ot1"/>
+                                    <af:spacer width="10" height="10" id="s1"/>
+                                    <af:goLink text="applicationSecurity.jspx" id="gl1"
+                                               destination="/faces/pages/chapter9/applicationSecurity/applicationSecurity.jspx"/>
+                                    <af:spacer width="10" height="10" id="s2"/>
+                                    <af:goLink text="syncEmployeesTaskFlow.xml" id="gl2"
+                                               destination="#{SyncEmployeesBean.programmaticallyInvokeTaskFlow}"/>
+                                </af:panelFormLayout>
+                            </af:panelBox>
+                        </af:panelGroupLayout>
+                    </f:facet>
+                    <f:facet name="bottom"/>
+                </af:panelStretchLayout>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>
+
+                    

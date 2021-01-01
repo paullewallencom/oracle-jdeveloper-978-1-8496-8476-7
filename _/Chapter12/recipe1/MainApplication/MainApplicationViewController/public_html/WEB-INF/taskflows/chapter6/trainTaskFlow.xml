@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="trainTaskFlow">
+    <default-activity>trainStop1</default-activity>
+    <view id="trainStop1">
+      <page>/pages/chapter6/train/trainStop1.jspx</page>
+      <train-stop/>
+    </view>
+    <view id="trainStop2">
+      <page>/pages/chapter6/train/trainStop2.jspx</page>
+      <train-stop/>
+    </view>
+    <method-call id="prepare">
+      <method>#{bindings.prepare.execute}</method>
+      <outcome>
+        <fixed-outcome>prepare</fixed-outcome>
+      </outcome>
+    </method-call>
+    <view id="trainStop3">
+      <page>/pages/chapter6/train/trainStop3.jspx</page>
+      <train-stop>
+        <outcome>callPrepareBeforeStop3</outcome>
+      </train-stop>
+    </view>
+    <task-flow-call id="taskflowInitializer">
+      <task-flow-reference>
+        <document>/WEB-INF/taskflows/chapter6/taskflowInitializer.xml</document>
+        <id>taskflowInitializer</id>
+      </task-flow-reference>
+      <train-stop/>
+    </task-flow-call>
+    <view id="trainStop4">
+      <page>/pages/chapter6/train/trainStop4.jspx</page>
+      <train-stop/>
+    </view>
+    <train/>
+    <control-flow-rule id="__3">
+      <from-activity-id>prepare</from-activity-id>
+      <control-flow-case id="__4">
+        <from-outcome>prepare</from-outcome>
+        <to-activity-id>trainStop3</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__1">
+      <from-activity-id>*</from-activity-id>
+      <control-flow-case id="__2">
+        <from-outcome>callPrepareBeforeStop3</from-outcome>
+        <to-activity-id>prepare</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+    <control-flow-rule id="__5">
+      <from-activity-id>taskflowInitializer</from-activity-id>
+      <control-flow-case id="__6">
+        <from-outcome>nextStop</from-outcome>
+        <to-activity-id>trainStop4</to-activity-id>
+      </control-flow-case>
+      <control-flow-case id="__7">
+        <from-outcome>previousStop</from-outcome>
+        <to-activity-id>trainStop3</to-activity-id>
+      </control-flow-case>
+    </control-flow-rule>
+  </task-flow-definition>
+</adfc-config>

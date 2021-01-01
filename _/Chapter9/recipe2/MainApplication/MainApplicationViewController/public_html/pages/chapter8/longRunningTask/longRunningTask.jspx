@@ -1,0 +1,51 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="longRunningTask.jspx" id="d1">
+            <af:form id="f1">
+                <af:panelStretchLayout id="psl1">
+                    <f:facet name="top"/>
+                    <f:facet name="center">
+                        <af:toolbar id="t1">
+                            <af:commandButton text="Long Running Task" id="cb1" partialSubmit="true"
+                                              actionListener="#{LongRunningTaskBean.longRunningTask}">
+                                <af:clientListener type="action" method="longRunningTask"/>
+                            </af:commandButton>
+                        </af:toolbar>
+                        <!-- id="af_one_column_header_footer_stretched"   -->
+                    </f:facet>
+                    <f:facet name="bottom"/>
+                </af:panelStretchLayout>
+                <af:popup childCreation="deferred" autoCancel="disabled" id="longRunningPopup" contentDelivery="immediate">
+                    <af:dialog id="d2" closeIconVisible="false" type="none" title="Information">
+                        <af:outputText value="Long operation in progress... Please wait..." id="ot1"/>
+                    </af:dialog>
+                </af:popup>
+            </af:form>
+                <af:resource type="javascript">
+                  function longRunningTask(evt) {
+                      var popup = AdfPage.PAGE.findComponentByAbsoluteId('longRunningPopup');
+                      if (popup != null) {
+                          AdfPage.PAGE.addBusyStateListener(popup, busyStateListener);
+                          evt.preventUserInput();
+                      }
+                  }
+
+                  function busyStateListener(evt) {
+                      var popup = AdfPage.PAGE.findComponentByAbsoluteId('longRunningPopup');
+                      if (popup != null) {
+                          if (evt.isBusy()) {
+                              popup.show();
+                          }
+                          else if (popup.isPopupVisible()) {
+                              popup.hide();
+                              AdfPage.PAGE.removeBusyStateListener(popup, busyStateListener);
+                          }
+                      }
+                  }
+                </af:resource>
+        </af:document>
+    </f:view>
+</jsp:root>

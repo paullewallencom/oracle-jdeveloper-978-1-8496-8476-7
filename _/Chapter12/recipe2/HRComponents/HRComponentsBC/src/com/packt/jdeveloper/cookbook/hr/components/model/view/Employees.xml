@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Employees"
+  Version="11.1.2.60.17"
+  SelectList="Employee.EMPLOYEE_ID, 
+       Employee.FIRST_NAME, 
+       Employee.LAST_NAME, 
+       Employee.EMAIL, 
+       Employee.PHONE_NUMBER, 
+       Employee.HIRE_DATE, 
+       Employee.JOB_ID, 
+       Employee.SALARY, 
+       Employee.COMMISSION_PCT, 
+       Employee.MANAGER_ID, 
+       Employee.DEPARTMENT_ID, 
+       Employee.PICTURE"
+  FromList="EMPLOYEES Employee"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  RowClass="com.packt.jdeveloper.cookbook.hr.components.model.view.EmployeesRowImpl"
+  ComponentClass="com.packt.jdeveloper.cookbook.hr.components.model.view.EmployeesImpl"
+  PageIterMode="Full"
+  UseGlueCode="false"
+  ComponentInterface="com.packt.jdeveloper.cookbook.hr.components.model.view.common.Employees"
+  ClientProxyName="com.packt.jdeveloper.cookbook.hr.components.model.view.client.EmployeesClient"
+  OrderBy="LAST_NAME, FIRST_NAME"
+  FetchMode="FETCH_AS_NEEDED"
+  MaxFetchSize="10">
+  <DesignTime>
+    <Attr Name="_codeGenFlag2" Value="Access|Coll|VarAccess"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <Variable
+    Name="varFirstName"
+    Kind="viewcriteria"
+    Type="java.lang.String">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYHINT
+          Value="Hide"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Variable>
+  <Variable
+    Name="varLastName"
+    Kind="viewcriteria"
+    Type="java.lang.String">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYHINT
+          Value="Hide"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </Variable>
+  <ViewAccessor
+    Name="HrSharedComponentsAppModule_ColorsLov"
+    ViewObjectName="com.packt.jdeveloper.cookbook.hr.components.model.view.lov.ColorsLov"
+    AMUsageName="HrSharedComponentsAppModule"
+    ViewInstanceName="ColorsLov"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="HrSharedComponentsAppModule_CountriesLov"
+    ViewObjectName="com.packt.jdeveloper.cookbook.hr.components.model.view.lov.CountriesLov"
+    AMUsageName="HrSharedComponentsAppModule"
+    ViewInstanceName="CountriesLov"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="HrSharedComponentsAppModule_DepartmentsLov"
+    ViewObjectName="com.packt.jdeveloper.cookbook.hr.components.model.view.lov.DepartmentsLov"
+    AMUsageName="HrSharedComponentsAppModule"
+    ViewInstanceName="DepartmentsLov"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="HrSharedComponentsAppModule_JobsLov"
+    ViewObjectName="com.packt.jdeveloper.cookbook.hr.components.model.view.lov.JobsLov"
+    AMUsageName="HrSharedComponentsAppModule"
+    ViewInstanceName="JobsLov"
+    RowLevelBinds="true"/>
+  <ListBinding
+    Name="LOV_Departments"
+    ListVOName="HrSharedComponentsAppModule_DepartmentsLov"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="LovAttrib"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="DepartmentName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Jobs"
+    ListVOName="HrSharedComponentsAppModule_JobsLov"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="LovAttrib"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="JobTitle"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_Countries"
+    ListVOName="HrSharedComponentsAppModule_CountriesLov"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="LovAttrib"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="CountryName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_FavoriteColor"
+    ListVOName="HrSharedComponentsAppModule_ColorsLov"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="FavoriteColor"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="ColorDesc"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <EntityUsage
+    Name="Employee"
+    Entity="com.packt.jdeveloper.cookbook.hr.components.model.entity.Employee"/>
+  <ViewAttribute
+    Name="EmployeeId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="EmployeeId"
+    EntityUsage="Employee"
+    AliasName="EMPLOYEE_ID"
+    IsQueriable="false"/>
+  <ViewAttribute
+    Name="FirstName"
+    PrecisionRule="true"
+    EntityAttrName="FirstName"
+    EntityUsage="Employee"
+    AliasName="FIRST_NAME"/>
+  <ViewAttribute
+    Name="LastName"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="LastName"
+    EntityUsage="Employee"
+    AliasName="LAST_NAME"/>
+  <ViewAttribute
+    Name="Email"
+    IsUnique="true"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="Email"
+    EntityUsage="Employee"
+    AliasName="EMAIL"/>
+  <ViewAttribute
+    Name="PhoneNumber"
+    PrecisionRule="true"
+    EntityAttrName="PhoneNumber"
+    EntityUsage="Employee"
+    AliasName="PHONE_NUMBER"/>
+  <ViewAttribute
+    Name="HireDate"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="HireDate"
+    EntityUsage="Employee"
+    AliasName="HIRE_DATE">
+    <TransientExpression><![CDATA[adf.currentDate]]></TransientExpression>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="JobId"
+    IsNotNull="true"
+    PrecisionRule="true"
+    EntityAttrName="JobId"
+    EntityUsage="Employee"
+    AliasName="JOB_ID"/>
+  <ViewAttribute
+    Name="Salary"
+    PrecisionRule="true"
+    EntityAttrName="Salary"
+    EntityUsage="Employee"
+    AliasName="SALARY"/>
+  <ViewAttribute
+    Name="CommissionPct"
+    PrecisionRule="true"
+    EntityAttrName="CommissionPct"
+    EntityUsage="Employee"
+    AliasName="COMMISSION_PCT"/>
+  <ViewAttribute
+    Name="ManagerId"
+    PrecisionRule="true"
+    EntityAttrName="ManagerId"
+    EntityUsage="Employee"
+    AliasName="MANAGER_ID"/>
+  <ViewAttribute
+    Name="DepartmentId"
+    PrecisionRule="true"
+    EntityAttrName="DepartmentId"
+    EntityUsage="Employee"
+    AliasName="DEPARTMENT_ID"/>
+  <ViewAttribute
+    Name="LovAttrib"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="VIEW_ATTR"
+    SQLType="VARCHAR"
+    LOVName="LOV_Departments"
+    LOVFinder="LovSwitcher"
+    Precision="255">
+    <Properties>
+      <SchemaBasedProperties>
+        <DISPLAYWIDTH
+          Value="10"/>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="LovSwitcher"
+    IsUpdateable="false"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.lang.String"
+    ColumnType="$none$"
+    SQLType="VARCHAR">
+    <RecalcCondition><![CDATA[true]]></RecalcCondition>
+    <TransientExpression><![CDATA[if(JobId == 'SA_REP'){
+    return 'LOV_Countries'
+} else if(JobId == 'ST_CLERK'){
+    return 'LOV_Jobs'
+} else if(JobId == 'ST_MAN'){
+    return 'LOV_Departments'
+} else {
+    return null;
+}]]></TransientExpression>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="FavoriteColor"
+    IsSelected="false"
+    IsPersistent="false"
+    PrecisionRule="true"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    AliasName="VIEW_ATTR"
+    SQLType="VARCHAR"
+    LOVName="LOV_FavoriteColor">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="Picture"
+    IsQueriable="false"
+    PrecisionRule="true"
+    EntityAttrName="Picture"
+    EntityUsage="Employee"
+    AliasName="PICTURE"/>
+  <ViewCriteria
+    Name="EmployeesCriteria"
+    ViewObjectName="com.packt.jdeveloper.cookbook.hr.components.model.view.Employees"
+    Conjunction="AND">
+    <Properties>
+      <CustomProperties>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="EmployeesCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="FirstName"
+        ViewAttribute="FirstName"
+        Operator="STARTSWITH"
+        Conjunction="AND"
+        Value=":varFirstName"
+        IsBindVarValue="true"
+        Required="Optional"/>
+      <ViewCriteriaItem
+        Name="LastName"
+        ViewAttribute="LastName"
+        Operator="STARTSWITH"
+        Conjunction="AND"
+        Value=":varLastName"
+        IsBindVarValue="true"
+        Required="Optional"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
+  <ViewLinkAccessor
+    Name="Employees"
+    ViewLink="com.packt.jdeveloper.cookbook.hr.components.model.view.link.EmpManagerFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="Departmens"
+    ViewLink="com.packt.jdeveloper.cookbook.hr.components.model.view.link.DeptMgrFkLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <ClientInterface>
+    <Method
+      Name="adjustCommission"
+      MethodName="adjustCommission">
+      <Return
+        Type="void"/>
+      <Parameter
+        Name="commissionPctAdjustment"
+        Type="oracle.jbo.domain.Number"/>
+    </Method>
+  </ClientInterface>
+  <Properties>
+    <CustomProperties>
+      <Property
+        Name="RowCountLimit"
+        Value="1000"/>
+    </CustomProperties>
+  </Properties>
+</ViewObject>

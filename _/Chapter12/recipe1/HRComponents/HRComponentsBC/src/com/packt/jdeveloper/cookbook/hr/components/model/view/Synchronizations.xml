@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="Synchronizations"
+  Version="11.1.2.60.81"
+  SelectList="Synchronization.MODIFIED_COLUMN, 
+       Synchronization.ROWID, 
+       Synchronization.NEW_COLUMN"
+  FromList="HR.SYNCHRONIZATION Synchronization"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  RowClass="com.packt.jdeveloper.cookbook.shared.bc.extensions.ExtViewRowImpl"
+  ComponentClass="com.packt.jdeveloper.cookbook.shared.bc.extensions.ExtViewObjectImpl"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <EntityUsage
+    Name="Synchronization"
+    Entity="com.packt.jdeveloper.cookbook.hr.components.model.entity.Synchronization"/>
+  <ViewAttribute
+    Name="ModifiedColumn"
+    PrecisionRule="true"
+    EntityAttrName="ModifiedColumn"
+    EntityUsage="Synchronization"
+    AliasName="MODIFIED_COLUMN"/>
+  <ViewAttribute
+    Name="RowID"
+    IsUpdateable="false"
+    PrecisionRule="true"
+    EntityAttrName="RowID"
+    EntityUsage="Synchronization"
+    AliasName="ROWID"/>
+  <ViewAttribute
+    Name="NewColumn"
+    PrecisionRule="true"
+    EntityAttrName="NewColumn"
+    EntityUsage="Synchronization"
+    AliasName="NEW_COLUMN"/>
+</ViewObject>

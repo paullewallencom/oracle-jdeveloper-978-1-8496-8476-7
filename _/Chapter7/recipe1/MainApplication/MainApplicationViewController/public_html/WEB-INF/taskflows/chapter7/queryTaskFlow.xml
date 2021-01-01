@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<adfc-config xmlns="http://xmlns.oracle.com/adf/controller" version="1.2">
+  <task-flow-definition id="queryTaskFlow">
+    <default-activity>queryView</default-activity>
+    <view id="queryView">
+      <page>/pages/chapter7/querySearchForm/queryView.jspx</page>
+    </view>
+  </task-flow-definition>
+</adfc-config>

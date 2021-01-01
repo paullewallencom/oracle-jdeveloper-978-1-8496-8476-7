@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewObject SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewObject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="CascadingLovs"
+  Version="11.1.2.60.17"
+  SelectList="CascadingLovs.DEPARTMENT_ID, 
+       CascadingLovs.EMPLOYEE_ID, 
+       CascadingLovs.ROWID"
+  FromList="HR.CASCADING_LOVS CascadingLovs"
+  BindingStyle="OracleName"
+  CustomQuery="false"
+  RowClass="com.packt.jdeveloper.cookbook.shared.bc.extensions.ExtViewRowImpl"
+  ComponentClass="com.packt.jdeveloper.cookbook.shared.bc.extensions.ExtViewObjectImpl"
+  PageIterMode="Full"
+  UseGlueCode="false">
+  <ViewAccessor
+    Name="DepartmentsLov"
+    ViewObjectName="com.packt.jdeveloper.cookbook.hr.components.model.view.lov.DepartmentsLov"
+    RowLevelBinds="true"/>
+  <ViewAccessor
+    Name="EmployeesLov"
+    ViewObjectName="com.packt.jdeveloper.cookbook.hr.components.model.view.lov.EmployeesLov">
+    <ViewCriteriaUsage
+      Name="EmployeesLovCriteria"
+      FullName="com.packt.jdeveloper.cookbook.hr.components.model.view.lov.EmployeesLov.EmployeesLovCriteria"/>
+    <ParameterMap>
+      <PIMap Variable="inDepartmentId">
+        <TransientExpression><![CDATA[DepartmentId]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewAccessor>
+  <ListBinding
+    Name="LOV_DepartmentId"
+    ListVOName="DepartmentsLov"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="DepartmentId"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="DepartmentId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="DepartmentName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <ListBinding
+    Name="LOV_EmployeeId"
+    ListVOName="EmployeesLov"
+    ListRangeSize="-1"
+    NullValueFlag="start"
+    NullValueId="${adfBundle['oracle.javatools.resourcebundle.SystemBundle']['NULL_VALUE_RESID']}"
+    MRUCount="0">
+    <AttrArray Name="AttrNames">
+      <Item Value="EmployeeId"/>
+    </AttrArray>
+    <AttrArray Name="ListAttrNames">
+      <Item Value="EmployeeId"/>
+    </AttrArray>
+    <AttrArray Name="ListDisplayAttrNames">
+      <Item Value="FirstName"/>
+      <Item Value="LastName"/>
+    </AttrArray>
+    <DisplayCriteria/>
+  </ListBinding>
+  <EntityUsage
+    Name="CascadingLovs"
+    Entity="com.packt.jdeveloper.cookbook.hr.components.model.entity.CascadingLovs"/>
+  <ViewAttribute
+    Name="DepartmentId"
+    PrecisionRule="true"
+    EntityAttrName="DepartmentId"
+    EntityUsage="CascadingLovs"
+    AliasName="DEPARTMENT_ID"
+    LOVName="LOV_DepartmentId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+        <AUTOSUBMIT
+          Value="true"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="EmployeeId"
+    PrecisionRule="true"
+    EntityAttrName="EmployeeId"
+    EntityUsage="CascadingLovs"
+    AliasName="EMPLOYEE_ID"
+    LOVName="LOV_EmployeeId">
+    <Properties>
+      <SchemaBasedProperties>
+        <CONTROLTYPE
+          Value="choice"/>
+      </SchemaBasedProperties>
+    </Properties>
+  </ViewAttribute>
+  <ViewAttribute
+    Name="RowID"
+    IsUpdateable="false"
+    PrecisionRule="true"
+    EntityAttrName="RowID"
+    EntityUsage="CascadingLovs"
+    AliasName="ROWID"/>
+</ViewObject>

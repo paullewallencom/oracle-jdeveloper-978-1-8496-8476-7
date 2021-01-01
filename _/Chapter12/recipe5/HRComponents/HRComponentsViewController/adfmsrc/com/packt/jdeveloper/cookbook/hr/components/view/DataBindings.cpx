@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Application xmlns="http://xmlns.oracle.com/adfm/application" version="11.1.2.60.17" id="DataBindings"
+             SeparateXMLFiles="false" Package="com.packt.jdeveloper.cookbook.hr.components.view" ClientType="Generic">
+  <pageMap>
+    <page path="/recipe3_8.jspx" usageId="com_packt_jdeveloper_cookbook_hr_components_view_view1PageDef"/>
+  </pageMap>
+  <pageDefinitionUsages>
+    <page id="com_packt_jdeveloper_cookbook_hr_components_view_view1PageDef"
+          path="com.packt.jdeveloper.cookbook.hr.components.view.pageDefs.recipe3_8PageDef"/>
+  </pageDefinitionUsages>
+  <dataControlUsages>
+    <BC4JDataControl id="HrComponentsAppModuleDataControl"
+                     Package="com.packt.jdeveloper.cookbook.hr.components.model.application"
+                     FactoryClass="oracle.adf.model.bc4j.DataControlFactoryImpl" SupportsTransactions="true"
+                     SupportsFindMode="true" SupportsRangesize="true" SupportsResetState="true"
+                     SupportsSortCollection="true" Configuration="HrComponentsAppModuleLocal" syncMode="Immediate"
+                     xmlns="http://xmlns.oracle.com/adfm/datacontrol"/>
+  </dataControlUsages>
+</Application>

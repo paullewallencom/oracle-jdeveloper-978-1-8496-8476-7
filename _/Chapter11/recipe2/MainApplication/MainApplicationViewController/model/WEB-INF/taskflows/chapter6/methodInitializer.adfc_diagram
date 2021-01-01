@@ -1,0 +1,48 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<SDM>
+   <OverallProperties
+      id="OverallProperties1">
+      <property
+         name="linkStyle">Orthogonal</property>
+   </OverallProperties>
+   <MethodCall
+      id="MethodCall3">
+      <property
+         name="activityId">prepare</property>
+      <property
+         name="start">true</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>prepare&lt;/b> (Default Activity)&lt;/p>&lt;p>Activity Type:  Method Call&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">251.14941</property>
+      <property
+         name="x">335.5</property>
+   </MethodCall>
+   <View
+      id="View4">
+      <property
+         name="activityId">methodInitializerView</property>
+      <property
+         name="page">/pages/methodInitializerView.jspx</property>
+      <property
+         name="description">&lt;html>&lt;p>&lt;b>methodInitializerView&lt;/b>&lt;/p>&lt;p>Activity Type:  View&lt;/p></property>
+      <property
+         name="exceptionHandler">false</property>
+      <property
+         name="y">283.59766</property>
+      <property
+         name="x">518.0</property>
+   </View>
+   <ControlFlowCase
+      islink="true"
+      id="ControlFlowCase5"
+      from="MethodCall3"
+      to="View4">
+      <property
+         name="fromOutcome">prepare</property>
+      <property
+         name="sdm:polyPoints">R50,426.75,250.79883,426.75,283.24707,L50</property>
+   </ControlFlowCase>
+</SDM>

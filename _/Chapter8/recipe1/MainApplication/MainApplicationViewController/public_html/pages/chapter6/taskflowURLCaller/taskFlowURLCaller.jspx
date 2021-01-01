@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="taskFlowURLCaller.jspx" id="d1">
+            <af:form id="f1">
+                <af:panelStretchLayout id="psl1">
+                    <f:facet name="top"/>
+                    <f:facet name="center">
+                        <af:goLink text="Call programmaticallyInvokeTaskFlow as a URL" id="gl1"
+                                   destination="#{TaskFlowURLCallerBean.programmaticallyInvokeTaskFlow}"
+                                   targetFrame="_blank"/>
+                        <!-- id="af_one_column_header_footer_stretched"   -->
+                    </f:facet>
+                    <f:facet name="bottom"/>
+                </af:panelStretchLayout>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

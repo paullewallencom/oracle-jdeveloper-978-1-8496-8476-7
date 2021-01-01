@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page" version="2.1" xmlns:f="http://java.sun.com/jsf/core"
+          xmlns:af="http://xmlns.oracle.com/adf/faces/rich">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <f:view>
+        <af:document title="carousel.jspx" id="d1">
+            <af:messages id="m1"/>
+            <af:form id="f1">
+                <af:panelStretchLayout id="psl1">
+                    <f:facet name="top"/>
+                    <f:facet name="center">
+                        <af:panelGroupLayout layout="scroll" id="pgl1" halign="center">
+                            <af:table value="#{bindings.Departments.collectionModel}" var="row"
+                                      rows="#{bindings.Departments.rangeSize}"
+                                      emptyText="#{bindings.Departments.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                      fetchSize="#{bindings.Departments.rangeSize}" rowBandingInterval="0"
+                                      selectedRowKeys="#{bindings.Departments.collectionModel.selectedRow}"
+                                      selectionListener="#{bindings.Departments.collectionModel.makeCurrent}"
+                                      rowSelection="single" id="t1" inlineStyle="width:460px; height:100px;">
+                                <af:column sortProperty="#{bindings.Departments.hints.DepartmentId.name}"
+                                           sortable="false"
+                                           headerText="#{bindings.Departments.hints.DepartmentId.label}" id="c1"
+                                           width="105">
+                                    <af:outputText value="#{row.DepartmentId}" id="ot1">
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.Departments.hints.DepartmentId.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.Departments.hints.DepartmentName.name}"
+                                           sortable="false"
+                                           headerText="#{bindings.Departments.hints.DepartmentName.label}" id="c2"
+                                           width="105">
+                                    <af:outputText value="#{row.DepartmentName}" id="ot2"/>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.Departments.hints.ManagerId.name}" sortable="false"
+                                           headerText="#{bindings.Departments.hints.ManagerId.label}" id="c3"
+                                           width="105">
+                                    <af:outputText value="#{row.ManagerId}" id="ot3">
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.Departments.hints.ManagerId.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                                <af:column sortProperty="#{bindings.Departments.hints.LocationId.name}" sortable="false"
+                                           headerText="#{bindings.Departments.hints.LocationId.label}" id="c4"
+                                           width="107">
+                                    <af:outputText value="#{row.LocationId}" id="ot4">
+                                        <af:convertNumber groupingUsed="false"
+                                                          pattern="#{bindings.Departments.hints.LocationId.format}"/>
+                                    </af:outputText>
+                                </af:column>
+                            </af:table>
+                            <af:spacer height="10" id="s1"/>
+                            <af:carousel currentItemKey="#{bindings.DepartmentEmployees.treeModel.rootCurrencyRowKey}"
+                                         value="#{bindings.DepartmentEmployees.treeModel}" var="item" id="c5"
+                                         partialTriggers="::t1">
+                                <f:facet name="nodeStamp">
+                                    <af:carouselItem id="ci1" text="#{item.LastName} #{item.FirstName}, #{item.JobId}">
+                                        <af:image source="/images/#{item.JobId}.png"
+                                                  shortDesc="#{item.LastName} #{item.FirstName}, #{item.JobId}"
+                                                  id="i1"/>
+                                    </af:carouselItem>
+                                </f:facet>
+                            </af:carousel>
+                        </af:panelGroupLayout>
+                        <!-- id="af_one_column_header_footer_stretched"   -->
+                    </f:facet>
+                    <f:facet name="bottom"/>
+                </af:panelStretchLayout>
+            </af:form>
+        </af:document>
+    </f:view>
+</jsp:root>

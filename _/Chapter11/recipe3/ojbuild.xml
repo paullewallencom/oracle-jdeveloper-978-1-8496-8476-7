@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<ojdeploy-build basedir=".">
+  <!-- The <defaults> section can be used to define default parameters for all deploy tasks.
+       You can also define variables strictly for use within this file in macros.
+       Example:
+       <defaults>
+           <variable name="application.root" value="C:\recipes\chapter10\recipe3"/>
+       </defaults>
+       
+       We will be passing the application.root value with the -define argument, so we won't be using it.
+       
+       To run: ojdeploy -buildfile ojbuild.xml -define application.root=<application_root_directory>
+               where <application_root_directory> is the application root directory
+    -->
+  <!-- shared components workspace -->
+  <!-- This will build the SharedComponents.jar ADF Library JAR in the ReUsableJARs directory -->
+  <deploy>
+    <parameter name="workspace" value="${application.root}\SharedComponents\SharedComponents.jws"/>
+    <parameter name="project" value="SharedViewController"/>
+    <parameter name="profile" value="SharedComponents"/>
+  </deploy>
+  <!-- HRComponents workspace -->
+  <!-- This will build the HRComponents.jar ADF Library JAR in the ReUsableJARs directory -->
+  <deploy>
+    <parameter name="workspace" value="${application.root}\HRComponents\HRComponents.jws"/>
+    <parameter name="project" value="HRComponentsViewController"/>
+    <parameter name="profile" value="HRComponents"/>
+  </deploy>
+  <!-- main application workspace -->
+  <!-- This will build both of the MainApplication.war and MainApplication.ear archives in the 
+       MainApplication\MainApplicationViewController\deploy and MainApplication\deploy 
+       directories respectively 
+    -->
+  <deploy>
+    <parameter name="workspace" value="${application.root}\MainApplication\MainApplication.jws"/>
+    <parameter name="profile" value="MainApplication"/>
+  </deploy> 
+</ojdeploy-build>

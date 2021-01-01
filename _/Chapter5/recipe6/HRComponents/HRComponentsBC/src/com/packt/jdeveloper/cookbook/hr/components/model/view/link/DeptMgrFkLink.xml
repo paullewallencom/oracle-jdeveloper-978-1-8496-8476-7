@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE ViewLink SYSTEM "jbo_03_01.dtd">
+<!---->
+<ViewLink
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="DeptMgrFkLink"
+  Version="11.1.1.59.23"
+  EntityAssociation="com.packt.jdeveloper.cookbook.hr.components.model.entity.assoc.DeptMgrFkAssoc">
+  <DesignTime>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <ViewLinkDefEnd
+    Name="Employees"
+    Cardinality="1"
+    Owner="com.packt.jdeveloper.cookbook.hr.components.model.view.Employees"
+    Source="true">
+    <DesignTime>
+      <Attr Name="_finderName" Value="Employees"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.packt.jdeveloper.cookbook.hr.components.model.view.Employees.EmployeeId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+  <ViewLinkDefEnd
+    Name="Departmens"
+    Cardinality="-1"
+    Owner="com.packt.jdeveloper.cookbook.hr.components.model.view.Departments">
+    <DesignTime>
+      <Attr Name="_finderName" Value="Departmens"/>
+      <Attr Name="_isUpdateable" Value="true"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="com.packt.jdeveloper.cookbook.hr.components.model.view.Departments.ManagerId"/>
+    </AttrArray>
+  </ViewLinkDefEnd>
+</ViewLink>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE AppModule SYSTEM "jbo_03_01.dtd">
+<!---->
+<AppModule
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="HrAppModule"
+  Version="11.1.1.59.23"
+  ComponentClass="com.packt.jdeveloper.cookbook.shared.bc.test.HrAppModuleImpl"
+  ClearCacheOnRollback="true"
+  ComponentInterface="com.packt.jdeveloper.cookbook.shared.bc.test.common.HrAppModule"
+  ClientProxyName="com.packt.jdeveloper.cookbook.shared.bc.test.client.HrAppModuleClient">
+  <DesignTime>
+    <Attr Name="_deployType" Value="0"/>
+    <Attr Name="_isCodegen" Value="true"/>
+  </DesignTime>
+  <ViewUsage
+    Name="Employees"
+    ViewObjectName="com.packt.jdeveloper.cookbook.shared.bc.test.Employees"/>
+  <ViewUsage
+    Name="Managers"
+    ViewObjectName="com.packt.jdeveloper.cookbook.shared.bc.test.Employees"/>
+  <ViewLinkUsage
+    Name="EmpManagerFkLink1"
+    ViewLinkObjectName="com.packt.jdeveloper.cookbook.shared.bc.test.EmpManagerFkLink"
+    SrcViewUsageName="com.packt.jdeveloper.cookbook.shared.bc.test.HrAppModule.Employees"
+    DstViewUsageName="com.packt.jdeveloper.cookbook.shared.bc.test.HrAppModule.Managers"
+    Reversed="false"/>
+  <ClientInterface>
+    <Method
+      Name="testSQLProcedure">
+      <Return
+        Type="void"/>
+    </Method>
+  </ClientInterface>
+</AppModule>

@@ -1,0 +1,12 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<BC4JConfig version="11.1" xmlns="http://xmlns.oracle.com/bc4j/configuration">
+   <AppModuleConfigBag ApplicationName="com.packt.jdeveloper.cookbook.hr.components.model.application.HrComponentsAppModule">
+      <AppModuleConfig name="HrComponentsAppModuleLocal" ApplicationName="com.packt.jdeveloper.cookbook.hr.components.model.application.HrComponentsAppModule" DeployPlatform="LOCAL" JDBCName="HR" jbo.project="com.packt.jdeveloper.cookbook.hr.components.model.HRComponentsBC">
+         <Security AppModuleJndiName="com.packt.jdeveloper.cookbook.hr.components.model.application.HrComponentsAppModule"/>
+      </AppModuleConfig>
+      <AppModuleConfig name="HrComponentsAppModuleShared" ApplicationName="com.packt.jdeveloper.cookbook.hr.components.model.application.HrComponentsAppModule" DeployPlatform="LOCAL" JDBCName="HR" jbo.project="com.packt.jdeveloper.cookbook.hr.components.model.HRComponentsBC">
+         <AM-Pooling jbo.ampool.maxpoolsize="1" jbo.ampool.isuseexclusive="false"/>
+         <Security AppModuleJndiName="com.packt.jdeveloper.cookbook.hr.components.model.application.HrComponentsAppModule"/>
+      </AppModuleConfig>
+   </AppModuleConfigBag>
+</BC4JConfig>
